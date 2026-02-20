@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MSB Riding Academy — Brand Reference</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cinzel+Decorative:wght@400;700&family=IBM+Plex+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* ══ MSB HYBRID PALETTE ══ */
+  /* Grades 10-20: IBM-MSB (100% saturation — full purple commitment) */
+  --p10: #f8f2ff;
+  --p20: #eadaff;
+  /* Grades 30-100: AI Studio (disciplined saturation — authority & depth) */
+  --p30: #ceabf0;
+  --p40: #b27be6;
+  --p50: #9346db;
+  --p60: #700ad6;   /* ★ PRIMARY INTERACTIVE */
+  --p70: #4f039c;
+  --p80: #310170;   /* ★ BRAND IDENTIFIER — logo, H1, H2 */
+  --p90: #1c0040;   /* ★ FOOTER / HERO DARK */
+  --p100: #0d001f;  /* ★ NEAR-BLACK BODY TEXT */
+
+  /* ══ GOLD SYSTEM (AI Studio lighter golds preferred) ══ */
+  --gold-light: #F0C84A;   /* Links/text on dark purple — AI Studio preference */
+  --gold-mid:   #C9A227;   /* Logo, thin accent rules */
+  --gold-dark:  #7B4F00;   /* Gold on white surfaces only */
+
+  /* ══ NEUTRALS ══ */
+  --white:    #ffffff;
+  --gray-10:  #f4f4f4;
+  --gray-20:  #e0e0e0;
+  --gray-50:  #8d8d8d;
+  --gray-70:  #525252;
+  --gray-100: #161616;
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background: var(--p100);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+/* ══════════════════════════════════════
+   COVER
+══════════════════════════════════════ */
+.cover {
+  min-height: 100vh;
+  background: var(--p90);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 40px;
+  position: relative;
+  overflow: hidden;
+}
+.cover::before {
+  content: '';
+  position: absolute;
+  top: -200px; left: 50%;
+  transform: translateX(-50%);
+  width: 800px; height: 800px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(79,3,156,0.4) 0%, transparent 65%);
+}
+.cover::after {
+  content: '';
+  position: absolute;
+  bottom: -100px; right: -100px;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(49,1,112,0.5) 0%, transparent 70%);
+}
+.cover-eyebrow {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 32px;
+  position: relative;
+}
+.cover-logo {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(48px, 8vw, 96px);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 8px;
+  position: relative;
+  letter-spacing: 8px;
+}
+.cover-rule {
+  width: 120px;
+  height: 2px;
+  background: var(--gold-mid);
+  margin: 24px auto;
+  position: relative;
+}
+.cover-rule::before, .cover-rule::after {
+  content: '✦';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gold-light);
+  font-size: 10px;
+}
+.cover-rule::before { left: -20px; }
+.cover-rule::after { right: -20px; }
+.cover-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(16px, 2vw, 22px);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--p20);
+  letter-spacing: 3px;
+  margin-bottom: 16px;
+  position: relative;
+}
+.cover-meta {
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--p40);
+  position: relative;
+}
+
+/* ══════════════════════════════════════
+   SECTION SHELL
+══════════════════════════════════════ */
+.section {
+  padding: 80px 64px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.section.light { background: var(--white); }
+.section.near-white { background: var(--gray-10); }
+.section.dark { background: var(--p90); }
+.section.darkest { background: var(--p100); }
+.section.brand { background: var(--p80); }
+
+.section-label {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 12px;
+}
+.section-label.on-light { color: var(--p60); }
+.section-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(22px, 3vw, 36px);
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+.section-title.on-light { color: var(--p80); }
+
+/* ══════════════════════════════════════
+   PALETTE DISPLAY
+══════════════════════════════════════ */
+.palette-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 0;
+  border: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 32px;
+}
+.swatch {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 8px;
+  position: relative;
+  cursor: default;
+  transition: transform 0.2s;
+}
+.swatch:hover { transform: scaleY(1.05); transform-origin: bottom; z-index: 1; }
+.swatch-grade {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.swatch-hex {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 8px;
+  opacity: 0.7;
+  margin-top: 2px;
+}
+.swatch-star {
+  position: absolute;
+  top: 6px; right: 6px;
+  font-size: 8px;
+  color: var(--gold-light);
+}
+.swatch-source {
+  position: absolute;
+  top: 6px; left: 6px;
+  font-size: 7px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  opacity: 0.6;
+}
+
+/* Palette detail table */
+.palette-table { width: 100%; border-collapse: collapse; }
+.palette-table th {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  text-align: left;
+}
+.palette-table td {
+  font-size: 12px;
+  padding: 10px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  color: var(--p20);
+  vertical-align: middle;
+}
+.palette-table tr:hover td { background: rgba(255,255,255,0.02); }
+.td-swatch {
+  width: 32px; height: 32px;
+  border-radius: 2px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 12px;
+}
+.td-grade { font-family: 'Cinzel', serif; font-weight: 700; color: var(--white); font-size: 13px; }
+.td-hex { font-family: 'IBM Plex Sans', sans-serif; font-size: 11px; color: var(--p30); letter-spacing: 1px; }
+.td-source-ibm { color: var(--gold-light); font-weight: 600; font-size: 10px; }
+.td-source-ai  { color: var(--p40); font-size: 10px; }
+.td-role { color: var(--p20); font-size: 11px; }
+.td-star { color: var(--gold-light); font-size: 14px; }
+
+/* ══════════════════════════════════════
+   GOLD SECTION
+══════════════════════════════════════ */
+.gold-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px; }
+.gold-card {
+  padding: 28px;
+  border: 1px solid rgba(255,255,255,0.08);
+  position: relative;
+}
+.gold-swatch-bar {
+  height: 48px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.gold-name { font-family: 'Cinzel', serif; font-size: 13px; font-weight: 700; color: var(--white); margin-bottom: 6px; letter-spacing: 1px; }
+.gold-hex { font-family: 'IBM Plex Sans', sans-serif; font-size: 11px; color: var(--p30); margin-bottom: 10px; letter-spacing: 1px; }
+.gold-use { font-size: 12px; color: var(--p30); line-height: 1.6; }
+.gold-preferred { position: absolute; top: 12px; right: 12px; font-size: 9px; font-weight: 600; letter-spacing: 2px; color: var(--gold-light); text-transform: uppercase; }
+
+/* ══════════════════════════════════════
+   TYPOGRAPHY SECTION
+══════════════════════════════════════ */
+.type-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.type-block { padding: 32px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); }
+.type-specimen-display {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(28px, 3vw, 48px);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+.type-specimen-display em { font-style: normal; color: var(--gold-light); }
+.type-specimen-decorative {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(20px, 2.5vw, 36px);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 8px;
+  letter-spacing: 4px;
+}
+.type-specimen-italic {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 2vw, 28px);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--p20);
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+.type-specimen-body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--p30);
+  margin-bottom: 8px;
+}
+.type-meta {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--p50);
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.type-scale { margin-top: 32px; }
+.type-scale-row {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.type-scale-label { font-size: 9px; font-weight: 600; letter-spacing: 2px; color: var(--p50); text-transform: uppercase; width: 60px; flex-shrink: 0; }
+.type-scale-sample { font-family: 'Cinzel', serif; color: var(--white); }
+.type-scale-detail { font-size: 10px; color: var(--p40); margin-left: auto; letter-spacing: 1px; }
+
+/* ══════════════════════════════════════
+   COMPONENT SHOWCASE
+══════════════════════════════════════ */
+
+/* NAV — the one we love */
+.comp-nav {
+  background: var(--p90);
+  padding: 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  border-bottom: 2px solid var(--gold-mid);
+  margin-bottom: 2px;
+}
+.comp-nav-logo {
+  font-family: 'Cinzel', serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+}
+.comp-nav-links { display: flex; gap: 32px; }
+.comp-nav-link {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--p20);
+  cursor: pointer;
+  padding-bottom: 3px;
+  transition: color 0.2s;
+}
+.comp-nav-link.active { color: var(--white); border-bottom: 2px solid var(--p60); }
+
+/* FOOTER — the one we love (AI Studio p90 + IBM-MSB p20 links) */
+.comp-footer {
+  background: var(--p90);
+  padding: 48px 64px;
+  border-top: 3px solid var(--gold-mid);
+}
+.comp-footer-inner { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; margin-bottom: 36px; }
+.comp-footer-logo {
+  font-family: 'Cinzel', serif;
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+.comp-footer-tagline {
+  font-size: 9px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--p50);
+  margin-bottom: 20px;
+}
+.comp-footer-body {
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--p30);
+}
+.comp-footer-col-title {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 16px;
+}
+/* THE MAGIC — p20 links on p90 background */
+.comp-footer-link {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--p20);  /* #eadaff — IBM-MSB grade 20, 100% saturation */
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.comp-footer-link:hover { color: var(--gold-light); }
+.comp-footer-rule { height: 1px; background: rgba(201,162,39,0.2); margin-bottom: 20px; }
+.comp-footer-copy { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--p70); }
+
+/* PRICING CARD — Claude's layout + AI Studio colors */
+.pricing-section {
+  background: var(--p10);
+  padding: 48px;
+}
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.price-card {
+  background: var(--p80);
+  padding: 36px;
+  position: relative;
+  overflow: hidden;
+  border-top: 3px solid transparent;
+  transition: transform 0.2s;
+}
+.price-card:hover { transform: translateY(-4px); }
+.price-card.featured { border-top-color: var(--gold-mid); }
+.price-card::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 80px; height: 80px;
+  background: var(--p70);
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  opacity: 0.3;
+}
+.price-tier {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  height: 16px;
+}
+.price-card.featured .price-tier { color: var(--gold-light); }
+.price-card:not(.featured) .price-tier { color: transparent; }
+.price-name {
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+.price-amount {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 42px;
+  font-weight: 600;
+  color: var(--gold-light);
+  margin-bottom: 4px;
+  line-height: 1;
+}
+.price-amount sub { font-size: 14px; color: var(--p40); font-weight: 300; vertical-align: middle; }
+.price-per { font-size: 10px; color: var(--p40); margin-bottom: 24px; letter-spacing: 1px; }
+.price-divider { height: 1px; background: rgba(255,255,255,0.08); margin-bottom: 20px; }
+.price-feature {
+  font-size: 12px;
+  color: var(--p20);
+  padding: 6px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.4;
+}
+/* THE MAGIC — gold asterisks */
+.price-check {
+  color: var(--gold-light);
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.price-btn {
+  margin-top: 24px;
+  width: 100%;
+  padding: 13px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  color: var(--white);
+  background: var(--p60);
+  transition: background 0.2s;
+}
+.price-btn:hover { background: var(--p70); }
+.price-btn.outline {
+  background: transparent;
+  border: 1px solid var(--p40);
+  color: var(--p30);
+}
+.price-btn.outline:hover { background: rgba(255,255,255,0.05); }
+
+/* BUTTONS */
+.btn-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; margin-bottom: 24px; }
+.btn {
+  padding: 13px 28px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-primary { background: var(--p60); color: var(--white); }
+.btn-primary:hover { background: var(--p70); }
+.btn-secondary { background: transparent; color: var(--p30); border: 1px solid var(--p40); }
+.btn-secondary:hover { border-color: var(--p30); color: var(--white); }
+.btn-gold { background: var(--gold-mid); color: var(--p100); }
+.btn-gold:hover { background: var(--gold-light); }
+.btn-ghost { background: transparent; color: var(--gold-light); border: 1px solid var(--gold-mid); }
+.btn-ghost:hover { background: var(--gold-mid); color: var(--p100); }
+
+/* TAGS */
+.tag-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.tag {
+  padding: 5px 14px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.tag-default { background: var(--p20); color: var(--p80); }
+.tag-active { background: var(--p60); color: var(--white); }
+.tag-outline { background: transparent; color: var(--p30); border: 1px solid var(--p40); }
+.tag-gold { background: var(--gold-mid); color: var(--p100); }
+
+/* LIGHT SURFACE CARDS (showcasing p10/p20) */
+.light-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.light-card {
+  padding: 28px;
+  border-left: 4px solid var(--p60);
+  transition: border-color 0.2s, transform 0.2s;
+}
+.light-card:hover { border-color: var(--p80); transform: translateX(4px); }
+.light-card.on-p10 { background: var(--p10); }
+.light-card.on-p20 { background: var(--p20); }
+.light-card.on-white { background: var(--white); }
+.light-card-title {
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--p80);
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+.light-card-body { font-size: 12px; color: var(--gray-70); line-height: 1.6; margin-bottom: 12px; }
+.light-card-link { font-size: 9px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--p60); }
+
+/* SPACING/LAYOUT GUIDE */
+.spacing-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+.spacing-block { text-align: center; }
+.spacing-visual {
+  background: var(--p60);
+  margin: 0 auto 8px;
+  opacity: 0.7;
+}
+.spacing-label { font-size: 9px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--p40); margin-bottom: 4px; }
+.spacing-value { font-family: 'IBM Plex Sans', sans-serif; font-size: 10px; color: var(--p30); }
+
+/* USAGE RULES */
+.rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.rule-card { padding: 24px; border: 1px solid rgba(255,255,255,0.06); }
+.rule-card.do { border-left: 3px solid var(--gold-light); }
+.rule-card.dont { border-left: 3px solid var(--p50); }
+.rule-header { font-family: 'Cinzel', serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px; }
+.rule-card.do .rule-header { color: var(--gold-light); }
+.rule-card.dont .rule-header { color: var(--p40); }
+.rule-item { font-size: 12px; color: var(--p30); padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.04); line-height: 1.5; }
+.rule-item:last-child { border-bottom: none; }
+
+/* ZOHO SLOTS */
+.slots-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.slot-card { padding: 20px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); }
+.slot-swatch { height: 40px; margin-bottom: 12px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 600; letter-spacing: 1px; }
+.slot-name { font-family: 'Cinzel', serif; font-size: 11px; font-weight: 700; color: var(--white); margin-bottom: 4px; letter-spacing: 1px; }
+.slot-hex { font-family: 'IBM Plex Sans', sans-serif; font-size: 10px; color: var(--p40); margin-bottom: 6px; letter-spacing: 1px; }
+.slot-role { font-size: 10px; color: var(--p30); line-height: 1.5; }
+
+/* DIVIDER */
+.ornament-divider {
+  text-align: center;
+  padding: 32px 0 0;
+  color: var(--gold-mid);
+  font-size: 13px;
+  letter-spacing: 16px;
+  opacity: 0.4;
+}
+
+/* PAGE NUMBERS / SECTION IDs */
+.section-id {
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--p70);
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.section-id::after { content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.06); }
+
+/* ANNOTATIONS */
+.annotation {
+  display: inline-block;
+  padding: 3px 10px;
+  background: rgba(240,200,74,0.1);
+  border: 1px solid rgba(240,200,74,0.25);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 12px;
+}
+
+/* STAGGER ANIMATION */
+@keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+.cover > * { animation: fadeUp 0.8s ease both; }
+.cover-eyebrow { animation-delay: 0.1s; }
+.cover-logo    { animation-delay: 0.3s; }
+.cover-rule    { animation-delay: 0.5s; }
+.cover-subtitle { animation-delay: 0.6s; }
+.cover-meta    { animation-delay: 0.7s; }
+</style>
+</head>
+<body>
+
+<!-- ══ COVER ══ -->
+<div class="cover">
+  <div class="cover-eyebrow">Brand Reference Document · 2025</div>
+  <div class="cover-logo">MSB</div>
+  <div class="cover-rule"></div>
+  <div class="cover-subtitle">Riding Academy · Howell, Michigan</div>
+  <div class="cover-meta">Color · Typography · Components · Usage</div>
+</div>
+
+<!-- ══ SECTION 1: PALETTE ══ -->
+<div class="section dark">
+  <div class="section-id">01 · Color System</div>
+  <div class="section-label">The MSB Hybrid Palette</div>
+  <div class="section-title">Built on IBM Carbon Logic.<br>Anchored to Your Logo.</div>
+
+  <!-- BIG SWATCHES -->
+  <div class="palette-grid" style="margin-bottom:40px;">
+    <!-- P10 IBM-MSB -->
+    <div class="swatch" style="background:#f8f2ff;">
+      <span class="swatch-source" style="color:#310170;">IBM</span>
+      <span class="swatch-grade" style="color:#310170;">10</span>
+      <span class="swatch-hex" style="color:#310170;">#f8f2ff</span>
+    </div>
+    <!-- P20 IBM-MSB -->
+    <div class="swatch" style="background:#eadaff;">
+      <span class="swatch-source" style="color:#310170;">IBM</span>
+      <span class="swatch-star">✦</span>
+      <span class="swatch-grade" style="color:#310170;">20</span>
+      <span class="swatch-hex" style="color:#310170;">#eadaff</span>
+    </div>
+    <!-- P30-100 AI Studio -->
+    <div class="swatch" style="background:#ceabf0;">
+      <span class="swatch-source" style="color:#1c0040;">AI</span>
+      <span class="swatch-grade" style="color:#1c0040;">30</span>
+      <span class="swatch-hex" style="color:#1c0040;">#ceabf0</span>
+    </div>
+    <div class="swatch" style="background:#b27be6;">
+      <span class="swatch-source" style="color:#1c0040;">AI</span>
+      <span class="swatch-grade" style="color:#fff;">40</span>
+      <span class="swatch-hex" style="color:#fff;">#b27be6</span>
+    </div>
+    <div class="swatch" style="background:#9346db;">
+      <span class="swatch-source" style="color:#eadaff;">AI</span>
+      <span class="swatch-grade" style="color:#fff;">50</span>
+      <span class="swatch-hex" style="color:#fff;">#9346db</span>
+    </div>
+    <div class="swatch" style="background:#700ad6;">
+      <span class="swatch-source" style="color:#eadaff;">AI</span>
+      <span class="swatch-star">★</span>
+      <span class="swatch-grade" style="color:#fff;">60</span>
+      <span class="swatch-hex" style="color:#fff;">#700ad6</span>
+    </div>
+    <div class="swatch" style="background:#4f039c;">
+      <span class="swatch-source" style="color:#ceabf0;">AI</span>
+      <span class="swatch-grade" style="color:#fff;">70</span>
+      <span class="swatch-hex" style="color:#fff;">#4f039c</span>
+    </div>
+    <div class="swatch" style="background:#310170;">
+      <span class="swatch-source" style="color:#ceabf0;">AI</span>
+      <span class="swatch-star">★</span>
+      <span class="swatch-grade" style="color:#fff;">80</span>
+      <span class="swatch-hex" style="color:#fff;">#310170</span>
+    </div>
+    <div class="swatch" style="background:#1c0040;">
+      <span class="swatch-source" style="color:#ceabf0;">AI</span>
+      <span class="swatch-star">★</span>
+      <span class="swatch-grade" style="color:#fff;">90</span>
+      <span class="swatch-hex" style="color:#fff;">#1c0040</span>
+    </div>
+    <div class="swatch" style="background:#0d001f;">
+      <span class="swatch-source" style="color:#9346db;">AI</span>
+      <span class="swatch-grade" style="color:#fff;">100</span>
+      <span class="swatch-hex" style="color:#fff;">#0d001f</span>
+    </div>
+  </div>
+
+  <!-- DETAIL TABLE -->
+  <table class="palette-table">
+    <thead>
+      <tr>
+        <th>Grade</th><th>Hex</th><th>Source</th><th>Saturation</th><th>Primary Role</th><th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="td-swatch" style="background:#f8f2ff;border:1px solid rgba(255,255,255,0.1)"></span><span class="td-grade">10</span></td><td class="td-hex">#f8f2ff</td><td class="td-source-ibm">IBM-MSB</td><td>100% — fully committed</td><td class="td-role">Light section backgrounds, tints</td><td></td></tr>
+      <tr><td><span class="td-swatch" style="background:#eadaff;border:1px solid rgba(255,255,255,0.1)"></span><span class="td-grade">20</span></td><td class="td-hex">#eadaff</td><td class="td-source-ibm">IBM-MSB</td><td>100% — fully committed</td><td class="td-role">Text &amp; links on dark purple backgrounds</td><td class="td-star">✦</td></tr>
+      <tr><td><span class="td-swatch" style="background:#ceabf0"></span><span class="td-grade">30</span></td><td class="td-hex">#ceabf0</td><td class="td-source-ai">AI Studio</td><td>69.7% — refined</td><td class="td-role">Borders, tag outlines, decorative</td><td></td></tr>
+      <tr><td><span class="td-swatch" style="background:#b27be6"></span><span class="td-grade">40</span></td><td class="td-hex">#b27be6</td><td class="td-source-ai">AI Studio</td><td>68.2% — refined</td><td class="td-role">Mid-tone accents, light bg text</td><td></td></tr>
+      <tr><td><span class="td-swatch" style="background:#9346db"></span><span class="td-grade">50</span></td><td class="td-hex">#9346db</td><td class="td-source-ai">AI Studio</td><td>67.4% — refined</td><td class="td-role">UI graphics, icon fills, no body text</td><td></td></tr>
+      <tr><td><span class="td-swatch" style="background:#700ad6"></span><span class="td-grade">60</span></td><td class="td-hex">#700ad6</td><td class="td-source-ai">AI Studio</td><td>91.1% — vibrant</td><td class="td-role">ALL primary buttons, active states, links</td><td class="td-star">★</td></tr>
+      <tr><td><span class="td-swatch" style="background:#4f039c"></span><span class="td-grade">70</span></td><td class="td-hex">#4f039c</td><td class="td-source-ai">AI Studio</td><td>96.2% — deep</td><td class="td-role">Button hover, pressed states</td><td></td></tr>
+      <tr><td><span class="td-swatch" style="background:#310170"></span><span class="td-grade">80</span></td><td class="td-hex">#310170</td><td class="td-source-ai">AI Studio</td><td>98.2% — royal</td><td class="td-role">H1, H2 headings, logo color</td><td class="td-star">★</td></tr>
+      <tr><td><span class="td-swatch" style="background:#1c0040"></span><span class="td-grade">90</span></td><td class="td-hex">#1c0040</td><td class="td-source-ai">AI Studio</td><td>100% — maximal</td><td class="td-role">Hero &amp; footer backgrounds</td><td class="td-star">★</td></tr>
+      <tr><td><span class="td-swatch" style="background:#0d001f"></span><span class="td-grade">100</span></td><td class="td-hex">#0d001f</td><td class="td-source-ai">AI Studio</td><td>100% — maximal</td><td class="td-role">Near-black body text, page bg</td><td></td></tr>
+    </tbody>
+  </table>
+
+  <div class="ornament-divider">✦ ✦ ✦</div>
+</div>
+
+<!-- ══ SECTION 2: GOLD ══ -->
+<div class="section dark" style="border-top:1px solid rgba(255,255,255,0.04)">
+  <div class="section-id">02 · Gold System</div>
+  <div class="section-label">Accent Colors</div>
+  <div class="section-title">Gold — Used Sparingly.<br>Never as Background.</div>
+
+  <div class="gold-grid">
+    <div class="gold-card">
+      <div class="gold-swatch-bar" style="background:#F0C84A; color:#0d001f;">F0C84A</div>
+      <div class="gold-name">Gold Light</div>
+      <div class="gold-hex">#F0C84A</div>
+      <div class="gold-use">Links, nav text, and feature text on dark purple backgrounds. The gold that actually reads against P80/P90. AI Studio preference.</div>
+      <div class="gold-preferred">★ Preferred</div>
+    </div>
+    <div class="gold-card">
+      <div class="gold-swatch-bar" style="background:#C9A227; color:#0d001f;">C9A227</div>
+      <div class="gold-name">Gold Mid</div>
+      <div class="gold-hex">#C9A227</div>
+      <div class="gold-use">Logo color, thin accent rules, the 3px footer border-top, award badges. The brand gold. Use for structure, not text.</div>
+    </div>
+    <div class="gold-card">
+      <div class="gold-swatch-bar" style="background:#7B4F00; color:#fff;">7B4F00</div>
+      <div class="gold-name">Gold Dark</div>
+      <div class="gold-hex">#7B4F00</div>
+      <div class="gold-use">Gold text on white surfaces only. WCAG safe. Rarely needed — most gold usage is on dark backgrounds where Gold Light applies.</div>
+    </div>
+  </div>
+
+  <!-- Gold rules -->
+  <div class="rules-grid">
+    <div class="rule-card do">
+      <div class="rule-header">✦ Do</div>
+      <div class="rule-item">Use Gold Light (#F0C84A) for text on P80/P90 backgrounds</div>
+      <div class="rule-item">Use Gold Mid (#C9A227) for the 3px footer top border</div>
+      <div class="rule-item">Use Gold Mid for the logo wordmark color</div>
+      <div class="rule-item">Use Gold Mid for thin decorative rules (1–2px)</div>
+      <div class="rule-item">Use ✦ asterisk characters as gold accents in pricing, lists</div>
+    </div>
+    <div class="rule-card dont">
+      <div class="rule-header">— Don't</div>
+      <div class="rule-item">Never use gold as a background fill</div>
+      <div class="rule-item">Never use gold for body copy on white</div>
+      <div class="rule-item">Never combine gold with P60 purple — they compete</div>
+      <div class="rule-item">Never use more than one gold element per section</div>
+      <div class="rule-item">Never use Gold Dark (#7B4F00) on dark backgrounds</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SECTION 3: TYPOGRAPHY ══ -->
+<div class="section dark" style="border-top:1px solid rgba(255,255,255,0.04)">
+  <div class="section-id">03 · Typography</div>
+  <div class="section-label">Font System</div>
+  <div class="section-title">Four Fonts. One Voice.</div>
+
+  <div class="type-grid">
+    <div class="type-block">
+      <div class="annotation">Display / Logo</div>
+      <div class="type-specimen-decorative">MSB</div>
+      <div class="type-meta">Cinzel Decorative · Bold · Logo only</div>
+      <div style="margin-top:20px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.06);">
+        <div class="annotation">Headings / Nav / Buttons</div>
+        <div class="type-specimen-display">Ride With <em>Purpose.</em></div>
+        <div class="type-meta">Cinzel · 900 weight · All caps or title case</div>
+      </div>
+    </div>
+    <div class="type-block">
+      <div class="annotation">Subheadings / Pull Quotes</div>
+      <div class="type-specimen-italic">"Where every rider finds their stride, and every horse finds their voice."</div>
+      <div class="type-meta">Cormorant Garamond · 300 Italic · Quotes, taglines</div>
+      <div style="margin-top:20px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.06);">
+        <div class="annotation">Body / UI / Labels</div>
+        <div class="type-specimen-body">MSB Riding Academy has shaped riders into champions for over three decades. Our USEF-certified instructors bring world-class expertise to every lesson.</div>
+        <div class="type-meta">IBM Plex Sans · 400 regular · All UI text, body copy</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TYPE SCALE -->
+  <div class="type-scale" style="margin-top:40px;">
+    <div style="font-size:9px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--gold-light);margin-bottom:16px;">Type Scale</div>
+    <div class="type-scale-row">
+      <span class="type-scale-label">Display</span>
+      <span class="type-scale-sample" style="font-size:48px;font-weight:900;font-family:'Cinzel Decorative',serif;">MSB</span>
+      <span class="type-scale-detail">Cinzel Decorative · 48px+ · Logo only</span>
+    </div>
+    <div class="type-scale-row">
+      <span class="type-scale-label">H1</span>
+      <span class="type-scale-sample" style="font-size:36px;font-weight:900;">Riding Academy</span>
+      <span class="type-scale-detail">Cinzel · 36px · Page titles</span>
+    </div>
+    <div class="type-scale-row">
+      <span class="type-scale-label">H2</span>
+      <span class="type-scale-sample" style="font-size:24px;font-weight:700;">Our Programs</span>
+      <span class="type-scale-detail">Cinzel · 24px · Section titles</span>
+    </div>
+    <div class="type-scale-row">
+      <span class="type-scale-label">H3</span>
+      <span class="type-scale-sample" style="font-size:16px;font-weight:700;letter-spacing:1px;">Beginner Foundations</span>
+      <span class="type-scale-detail">Cinzel · 16px · Card titles</span>
+    </div>
+    <div class="type-scale-row">
+      <span class="type-scale-label">Quote</span>
+      <span class="type-scale-sample" style="font-size:18px;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;color:var(--p20);">"Est. 1991 · Howell, Michigan"</span>
+      <span class="type-scale-detail">Cormorant · 18px Italic · Taglines</span>
+    </div>
+    <div class="type-scale-row">
+      <span class="type-scale-label">Body</span>
+      <span class="type-scale-sample" style="font-size:14px;font-family:'IBM Plex Sans',sans-serif;font-weight:400;color:var(--p30);">Regular body copy at 14px, line-height 1.75</span>
+      <span class="type-scale-detail">IBM Plex Sans · 14px · Body</span>
+    </div>
+    <div class="type-scale-row">
+      <span class="type-scale-label">Label</span>
+      <span class="type-scale-sample" style="font-size:10px;font-family:'IBM Plex Sans',sans-serif;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--p40);">Section Label</span>
+      <span class="type-scale-detail">IBM Plex Sans · 10px · 600 · 4px tracking</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SECTION 4: COMPONENTS ══ -->
+<div class="section dark" style="border-top:1px solid rgba(255,255,255,0.04); padding-bottom:0;">
+  <div class="section-id">04 · Components</div>
+  <div class="section-label">UI Components</div>
+  <div class="section-title">Live Examples.</div>
+</div>
+
+<!-- NAV — the beloved one -->
+<div style="background:var(--p100); padding:24px 64px 0;">
+  <div class="annotation" style="margin-bottom:8px;">Navigation — P90 background · Gold Light logo · P20 links · gold border-bottom</div>
+</div>
+<div class="comp-nav">
+  <div class="comp-nav-logo">MSB Riding Academy</div>
+  <div class="comp-nav-links">
+    <span class="comp-nav-link active">Home</span>
+    <span class="comp-nav-link">Programs</span>
+    <span class="comp-nav-link">Instructors</span>
+    <span class="comp-nav-link">Boarding</span>
+    <span class="comp-nav-link">Contact</span>
+  </div>
+</div>
+
+<!-- BUTTONS -->
+<div class="section dark" style="border-top:1px solid rgba(255,255,255,0.04);">
+  <div class="annotation">Buttons</div>
+  <div class="btn-row">
+    <button class="btn btn-primary">Book a Lesson</button>
+    <button class="btn btn-secondary">Learn More</button>
+    <button class="btn btn-gold">View Programs</button>
+    <button class="btn btn-ghost">Contact Us</button>
+  </div>
+  <div style="font-size:10px;color:var(--p40);letter-spacing:1px;margin-top:8px;">
+    Primary P60 #700ad6 · Secondary outline P40 · Gold Mid #C9A227 · Ghost outline Gold Mid
+  </div>
+</div>
+
+<!-- TAGS -->
+<div class="section dark" style="border-top:1px solid rgba(255,255,255,0.04);">
+  <div class="annotation">Tags &amp; Chips</div>
+  <div class="tag-row">
+    <span class="tag tag-active">All Programs</span>
+    <span class="tag tag-default">Dressage</span>
+    <span class="tag tag-default">Hunter/Jumper</span>
+    <span class="tag tag-default">Western</span>
+    <span class="tag tag-outline">Therapeutic</span>
+    <span class="tag tag-gold">✦ Featured</span>
+  </div>
+  <div style="font-size:10px;color:var(--p40);letter-spacing:1px;margin-top:4px;">
+    Active P60 · Default P20 fill/P80 text · Outline P40 border · Gold Mid fill
+  </div>
+</div>
+
+<!-- LIGHT CARDS — showcasing P10/P20 -->
+<div class="section light">
+  <div class="section-id" style="color:var(--p50);">04b · Light Surface Components</div>
+  <div class="annotation" style="background:rgba(112,10,214,0.08);border-color:rgba(112,10,214,0.2);color:var(--p60);">Cards on light backgrounds — P10, P20, and White · P60 left border</div>
+  <div class="light-cards" style="margin-top:16px;">
+    <div class="light-card on-white">
+      <div class="light-card-title">On Pure White</div>
+      <div class="light-card-body">White background with P60 border. The most contrast — use for featured cards.</div>
+      <span class="light-card-link">Learn More →</span>
+    </div>
+    <div class="light-card on-p10">
+      <div class="light-card-title">On Purple 10</div>
+      <div class="light-card-body">#f8f2ff — fully saturated, so the purple identity stays even at this lightness.</div>
+      <span class="light-card-link">Learn More →</span>
+    </div>
+    <div class="light-card on-p20">
+      <div class="light-card-title">On Purple 20</div>
+      <div class="light-card-body">#eadaff — the magic grade. 100% saturation makes purple unmistakable here.</div>
+      <span class="light-card-link">Learn More →</span>
+    </div>
+  </div>
+</div>
+
+<!-- PRICING — Claude layout + AI Studio colors -->
+<div style="background:var(--p100); padding:24px 64px 0;">
+  <div class="annotation" style="margin-bottom:8px;">Pricing Cards — P80 dark cards on P10 background · Gold Light asterisks · P20 feature text · Gold border-top on featured</div>
+</div>
+<div class="pricing-section">
+  <div style="font-family:'Cinzel',serif;font-size:22px;font-weight:700;color:var(--p80);margin-bottom:32px;letter-spacing:1px;">Membership Plans</div>
+  <div class="pricing-grid">
+    <div class="price-card">
+      <div class="price-tier">&nbsp;</div>
+      <div class="price-name">Trail Rider</div>
+      <div class="price-amount">$140<sub>/mo</sub></div>
+      <div class="price-per">4 lessons per month</div>
+      <div class="price-divider"></div>
+      <div class="price-feature"><span class="price-check">✦</span> 4 group lessons</div>
+      <div class="price-feature"><span class="price-check">✦</span> Arena access weekends</div>
+      <div class="price-feature"><span class="price-check">✦</span> Monthly newsletter</div>
+      <div class="price-feature" style="color:var(--p50);"><span style="color:var(--p60);">–</span> &nbsp;Show horse access</div>
+      <button class="price-btn outline">Get Started</button>
+    </div>
+    <div class="price-card featured">
+      <div class="price-tier">✦ Most Popular</div>
+      <div class="price-name">Rider's Circle</div>
+      <div class="price-amount">$280<sub>/mo</sub></div>
+      <div class="price-per">8 lessons per month</div>
+      <div class="price-divider"></div>
+      <div class="price-feature"><span class="price-check">✦</span> 8 group lessons</div>
+      <div class="price-feature"><span class="price-check">✦</span> Arena access 3×/week</div>
+      <div class="price-feature"><span class="price-check">✦</span> Monthly clinic</div>
+      <div class="price-feature"><span class="price-check">✦</span> Show horse access</div>
+      <button class="price-btn">Join Now</button>
+    </div>
+    <div class="price-card">
+      <div class="price-tier">&nbsp;</div>
+      <div class="price-name">Champion</div>
+      <div class="price-amount">$480<sub>/mo</sub></div>
+      <div class="price-per">Unlimited + private sessions</div>
+      <div class="price-divider"></div>
+      <div class="price-feature"><span class="price-check">✦</span> Unlimited group lessons</div>
+      <div class="price-feature"><span class="price-check">✦</span> 2 private sessions/mo</div>
+      <div class="price-feature"><span class="price-check">✦</span> Full arena access</div>
+      <div class="price-feature"><span class="price-check">✦</span> Competition prep support</div>
+      <button class="price-btn">Join Now</button>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER — the one we love -->
+<div style="background:var(--p100); padding:24px 64px 0;">
+  <div class="annotation" style="margin-bottom:8px;">Footer — P90 background · Gold Mid border-top · P20 links (#eadaff at 100% sat) · Gold Light on hover · the magic combo</div>
+</div>
+<div class="comp-footer">
+  <div class="comp-footer-inner">
+    <div>
+      <div class="comp-footer-logo">MSB</div>
+      <div class="comp-footer-tagline">Riding Academy · Est. 1991 · Howell, Michigan</div>
+      <div class="comp-footer-body">Michigan's premier equestrian academy. Shaping riders and building character since 1991.</div>
+    </div>
+    <div>
+      <div class="comp-footer-col-title">Programs</div>
+      <span class="comp-footer-link">Beginner Foundations</span>
+      <span class="comp-footer-link">Competitive Training</span>
+      <span class="comp-footer-link">Equine Therapy</span>
+      <span class="comp-footer-link">Summer Camps</span>
+      <span class="comp-footer-link">Private Lessons</span>
+    </div>
+    <div>
+      <div class="comp-footer-col-title">Academy</div>
+      <span class="comp-footer-link">Programs</span>
+      <span class="comp-footer-link">Instructors</span>
+      <span class="comp-footer-link">Boarding</span>
+      <span class="comp-footer-link">Events</span>
+      <span class="comp-footer-link">Contact</span>
+    </div>
+  </div>
+  <div class="comp-footer-rule"></div>
+  <div class="comp-footer-copy">© 2025 MSB Riding Academy · All Rights Reserved · Howell, Michigan</div>
+</div>
+
+<!-- ══ SECTION 5: ZOHO SLOTS ══ -->
+<div class="section dark" style="border-top:1px solid rgba(255,255,255,0.04)">
+  <div class="section-id">05 · Implementation</div>
+  <div class="section-label">Zoho Color Slots</div>
+  <div class="section-title">Enter These Exactly.</div>
+
+  <div class="slots-grid">
+    <div class="slot-card">
+      <div class="slot-swatch" style="background:#700ad6;color:#fff;">#700ad6</div>
+      <div class="slot-name">Color Uno</div>
+      <div class="slot-hex">#700ad6</div>
+      <div class="slot-role">Primary buttons, active nav, icons, interactive elements</div>
+    </div>
+    <div class="slot-card">
+      <div class="slot-swatch" style="background:#C9A227;color:#0d001f;">#C9A227</div>
+      <div class="slot-name">Color Duo</div>
+      <div class="slot-hex">#C9A227</div>
+      <div class="slot-role">Logo color, accent rules, gold border on footer</div>
+    </div>
+    <div class="slot-card">
+      <div class="slot-swatch" style="background:#ffffff;color:#161616;border:1px solid #e0e0e0;">#ffffff</div>
+      <div class="slot-name">Color Trio</div>
+      <div class="slot-hex">#ffffff</div>
+      <div class="slot-role">White card and surface backgrounds</div>
+    </div>
+    <div class="slot-card">
+      <div class="slot-swatch" style="background:#1c0040;color:#fff;">#1c0040</div>
+      <div class="slot-name">Color Quadra</div>
+      <div class="slot-hex">#1c0040</div>
+      <div class="slot-role">Header band and footer background</div>
+    </div>
+    <div class="slot-card">
+      <div class="slot-swatch" style="background:#e0e0e0;color:#161616;">#e0e0e0</div>
+      <div class="slot-name">Color Penta</div>
+      <div class="slot-hex">#e0e0e0</div>
+      <div class="slot-role">All borders — form fields, tables, dividers</div>
+    </div>
+    <div class="slot-card">
+      <div class="slot-swatch" style="background:#0d001f;color:#fff;">#0d001f</div>
+      <div class="slot-name">Color Hexa</div>
+      <div class="slot-hex">#0d001f</div>
+      <div class="slot-role">All body text — richer than pure black</div>
+    </div>
+    <div class="slot-card">
+      <div class="slot-swatch" style="background:#F0C84A;color:#0d001f;">#F0C84A</div>
+      <div class="slot-name">Color Hepta</div>
+      <div class="slot-hex">#F0C84A</div>
+      <div class="slot-role">Links and text inside dark purple header/footer</div>
+    </div>
+    <div class="slot-card">
+      <div class="slot-swatch" style="background:#4f039c;color:#fff;">#4f039c</div>
+      <div class="slot-name">Color Octa</div>
+      <div class="slot-hex">#4f039c</div>
+      <div class="slot-role">Hyperlink hover state on white surfaces</div>
+    </div>
+  </div>
+</div>
+
+<!-- BACK COVER -->
+<div class="cover" style="min-height:40vh; padding:60px;">
+  <div class="cover-eyebrow">MSB Riding Academy · Brand Reference · 2025</div>
+  <div class="cover-rule"></div>
+  <div class="cover-subtitle">Est. 1991 · Howell, Michigan</div>
+</div>
+
+</body>
+</html>
